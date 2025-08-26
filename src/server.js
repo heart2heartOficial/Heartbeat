@@ -18,7 +18,7 @@ Socket.io é composta de duas partes:
 const app = express();
 const server = createServer(app);
 
-const port = process.env.port || 3_005;
+const port = process.env.port || 3_006;
 
 // Caminho absoluto do computador
 const atualPath = url.fileURLToPath(import.meta.url);
@@ -38,11 +38,6 @@ server.listen(
 );
 
 const io = new Server(server);
-/*
-Inicializa uma nova instancia do sokcet.io passando server vomo objeto
-*/
-io.on('connection', (socket) => {
-    console.log('A user connected');
-});
 
+export default io;
 
